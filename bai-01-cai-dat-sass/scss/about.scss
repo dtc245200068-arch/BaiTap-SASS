@@ -1,0 +1,22 @@
+
+$about-bg: #e0e7ff;
+$about-title: #4338ca;
+
+.about {
+    background: $about-bg;
+    text-align: center;
+    padding: 65px 20px;
+
+    h2 {
+        color: $about-title;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        max-width: 700px;
+        margin: auto;
+        color: #475569;
+        line-height: 1.8;
+    }
+}

@@ -1,0 +1,18 @@
+.about {
+  background: #e0e7ff;
+  text-align: center;
+  padding: 65px 20px;
+}
+.about h2 {
+  color: #4338ca;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #475569;
+  line-height: 1.8;
+}
+
+/*# sourceMappingURL=about.css.map */

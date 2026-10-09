@@ -1,0 +1,168 @@
+@use "sass:color";
+// BIẾN SASS
+$primary: #6366f1;
+$secondary: #06b6d4;
+$dark: #172033;
+$light: #f4f7ff;
+$white: #ffffff;
+
+// MIXIN
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-shadow {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: $light;
+    color: $dark;
+    line-height: 1.6;
+}
+
+// HEADER
+.header {
+    text-align: center;
+    padding: 55px 20px;
+    background: linear-gradient(135deg, $primary, $secondary);
+    color: $white;
+
+    h1 {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+// NAVIGATION
+.navbar {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 18px;
+    background: $dark;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
+
+// HERO
+.hero {
+    text-align: center;
+    padding: 75px 20px;
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        max-width: 650px;
+        margin: 0 auto 30px;
+        color: #64748b;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 30px;
+    background: $primary;
+    color: $white;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        background: color.adjust($primary, $lightness: -10%);
+        transform: translateY(-3px);
+    }
+}
+
+// FEATURES
+.features {
+    max-width: 1150px;
+    margin: auto;
+    padding: 30px 20px 75px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: $white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    @include card-shadow;
+    transition: transform 0.3s;
+
+    h3 {
+        color: $primary;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: #64748b;
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+    }
+}
+
+// FOOTER
+.footer {
+    text-align: center;
+    background: $dark;
+    color: $white;
+    padding: 25px;
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 29px;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+}

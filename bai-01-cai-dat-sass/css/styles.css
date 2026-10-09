@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7ff;
+  color: #172033;
+  line-height: 1.6;
+}
+
+.header {
+  text-align: center;
+  padding: 55px 20px;
+  background: linear-gradient(135deg, #6366f1, #06b6d4);
+  color: #ffffff;
+}
+.header h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+.header p {
+  font-size: 17px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  padding: 18px;
+  background: #172033;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #06b6d4;
+}
+
+.hero {
+  text-align: center;
+  padding: 75px 20px;
+}
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: #64748b;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 30px;
+  background: #6366f1;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: rgb(20.4705882353%, 22%, 92.862745098%);
+  transform: translateY(-3px);
+}
+
+.features {
+  max-width: 1150px;
+  margin: auto;
+  padding: 30px 20px 75px;
+}
+.features h2 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+.card h3 {
+  color: #6366f1;
+  margin-bottom: 15px;
+}
+.card p {
+  color: #64748b;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.footer {
+  text-align: center;
+  background: #172033;
+  color: #ffffff;
+  padding: 25px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .header h1 {
+    font-size: 29px;
+  }
+  .navbar {
+    gap: 15px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
