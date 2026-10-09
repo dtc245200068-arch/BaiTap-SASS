@@ -1,0 +1,13 @@
+
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.button {
+  @include m.button-style(v.$primary-color);
+
+  // Nesting: hiệu ứng khi di chuột
+  &:hover {
+    background: color.adjust(v.$primary-color, $lightness: -10%);
+    cursor: pointer;
+  }
+}

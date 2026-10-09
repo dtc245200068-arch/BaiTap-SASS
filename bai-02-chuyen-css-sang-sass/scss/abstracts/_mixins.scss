@@ -1,0 +1,15 @@
+
+@use "variables" as v;
+
+// Mixin định dạng nút bấm
+@mixin button-style($bg-color) {
+  background: $bg-color;
+  color: v.$white-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+// Mixin tạo bóng cho thẻ
+@mixin box-shadow {
+  box-shadow: v.$box-shadow;
+}
