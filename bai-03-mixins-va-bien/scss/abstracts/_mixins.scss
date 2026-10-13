@@ -1,0 +1,21 @@
+
+@use "variables" as v;
+
+// Mixin dùng chung cho các nút bấm
+@mixin button-style($bg-color) {
+    background: $bg-color;
+    color: v.$white-color;
+    padding: v.$padding-standard;
+    border-radius: v.$button-radius;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+// Mixin dùng chung cho các thẻ nội dung
+@mixin box-style {
+    background: v.$white-color;
+    padding: v.$card-padding;
+    border-radius: v.$card-radius;
+    box-shadow: v.$box-shadow-default;
+}

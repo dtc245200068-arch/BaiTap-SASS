@@ -1,0 +1,15 @@
+
+@use "../abstracts/mixins" as m;
+
+.card {
+    @include m.box-style;
+    margin-bottom: 20px;
+
+    h3 {
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}

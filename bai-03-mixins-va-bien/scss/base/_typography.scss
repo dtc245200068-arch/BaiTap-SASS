@@ -1,0 +1,24 @@
+
+@use "../abstracts/variables" as v;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: v.$text-color;
+    background: v.$background-color;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: v.$font-large;
+    color: v.$text-color;
+}
+
+h2 {
+    font-size: v.$font-medium;
+    color: v.$text-color;
+}
