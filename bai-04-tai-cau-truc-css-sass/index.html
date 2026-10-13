@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Grid - SASS</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Bố cục website chính -->
+    <div class="layout-preview">
+        <div class="gridcontainer">
+
+            <!-- Header -->
+            <div class="gridwrapper grid-header">
+                <div class="gridcontent header-block"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="gridwrapper grid-main">
+
+                <!-- Sidebar trái -->
+                <div class="gridcontent content-column col-3 sidebar">
+                    <div class="menu-item"></div>
+                    <div class="menu-item"></div>
+                    <div class="menu-item"></div>
+                    <div class="menu-item"></div>
+                </div>
+
+                <!-- 6 cột giữa -->
+                <div class="gridcontent content-column"></div>
+                <div class="gridcontent content-column"></div>
+                <div class="gridcontent content-column"></div>
+                <div class="gridcontent content-column"></div>
+                <div class="gridcontent content-column"></div>
+                <div class="gridcontent content-column"></div>
+
+                <!-- Sidebar phải -->
+                <div class="gridcontent content-column col-3 right-panel">
+                    <div class="panel-block"></div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="gridwrapper grid-footer">
+                <div class="gridcontent footer-block"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Lưới 12 cột -->
+    <div class="gridcontainer grid-overlay">
+        <div class="gridwrapper">
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+        </div>
+    </div>
+
+    <p>
+        Thay đổi kích thước trình duyệt để quan sát
+        hệ thống lưới 12 cột tự điều chỉnh theo chiều rộng.
+    </p>
+
+</body>
+</html>

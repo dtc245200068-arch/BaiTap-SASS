@@ -1,0 +1,57 @@
+
+@use "sass:math";
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.gridcontainer {
+    width: 100%;
+}
+
+.gridwrapper {
+    @include m.grid-wrapper(250px);
+}
+
+.gridcontent {
+    @include m.grid-column(math.div(100%, v.$column-count));
+    background-color: v.$grid-background;
+}
+
+// Header, content và footer
+.grid-header {
+    height: v.$header-height;
+}
+
+.grid-main {
+    height: v.$content-height;
+}
+
+.grid-footer {
+    height: v.$footer-height;
+}
+
+// Các kích thước cột
+.col-3 {
+    width: 25%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+// Lớp lưới 12 cột tham chiếu
+.grid-overlay {
+    opacity: 0.1;
+
+    .gridwrapper {
+        height: 370px;
+    }
+
+    .gridcontent {
+        background: v.$white;
+        border-right: 1px solid v.$grid-line;
+    }
+
+    .gridcontent:first-child {
+        border-left: 1px solid v.$grid-line;
+    }
+}

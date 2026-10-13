@@ -1,0 +1,29 @@
+
+@use "variables" as v;
+
+// Mixin tạo vùng bố cục
+@mixin grid-wrapper($height) {
+    position: relative;
+    overflow: auto;
+    height: $height;
+}
+
+// Mixin tạo cột
+@mixin grid-column($width) {
+    width: $width;
+    height: 100%;
+    float: left;
+    margin: 0;
+    border-right: 1px solid v.$grid-border;
+}
+
+// Mixin tạo khối màu
+@mixin color-block($color) {
+    background-color: $color;
+    border: none;
+}
+
+// Mixin sử dụng cho vùng chiếm toàn bộ chiều ngang
+@mixin full-width {
+    width: 100%;
+}

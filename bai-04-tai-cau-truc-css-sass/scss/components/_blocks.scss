@@ -1,0 +1,59 @@
+
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+// Lớp hiển thị bố cục chính
+.layout-preview {
+    position: absolute;
+    opacity: 0.9;
+    width: auto;
+    left: 8px;
+    right: 10px;
+}
+
+// Thanh màu tím phía trên
+.header-block {
+    @include m.color-block(v.$primary-color);
+    @include m.full-width;
+    border-right-color: transparent;
+}
+
+// Thanh màu xanh phía dưới
+.footer-block {
+    @include m.color-block(v.$footer-color);
+    @include m.full-width;
+    border-right-color: transparent;
+}
+
+// Các cột nội dung
+.content-column {
+    background-color: v.$white;
+    border: none;
+}
+
+// Menu bên trái
+.sidebar {
+    padding-top: 15px;
+
+    .menu-item {
+        @include m.color-block(v.$secondary-color);
+        width: 100%;
+        height: v.$menu-item-height;
+        margin-bottom: v.$menu-gap;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Khối bên phải
+.right-panel {
+    padding-top: 15px;
+
+    .panel-block {
+        @include m.color-block(v.$secondary-color);
+        width: 100%;
+        height: 92%;
+    }
+}
